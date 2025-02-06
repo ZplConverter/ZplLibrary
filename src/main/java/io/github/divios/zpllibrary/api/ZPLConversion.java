@@ -156,7 +156,7 @@ public class ZPLConversion {
             String graphicField = String.format("^GFA,%d,%d,%d,%s",
                     binaryByteCount[0], binaryByteCount[0], bytesPerRow[0], bitmapPayload);
 
-            return String.format("^XA%s^FS", graphicField);      // ^XA%s^FS^XZ
+            return String.format("^XA%s^FS^XZ", graphicField);
 
         } catch (Exception e) {
             throw new RuntimeException("Failed to convert bitmap to ZPL", e);
